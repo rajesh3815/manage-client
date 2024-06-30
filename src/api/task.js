@@ -1,5 +1,5 @@
 import axios from "axios";
-const staticUrl = "http://localhost:3000";
+const staticUrl = "https://manage-server-pw7w.onrender.com";
 
 export const addPeople = async (people) => {
   try {

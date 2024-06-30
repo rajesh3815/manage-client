@@ -106,7 +106,7 @@ const Board = () => {
         <div className={Style.content}>
           {/* backlog section */}
           <div className={Style.backlogDiv}>
-            <div className={Style.inner}>
+            <div style={{marginBottom:"10px"}} className={Style.inner}>
               <p>Backlog</p>{" "}
               <span
                 onClick={() => {
@@ -162,7 +162,7 @@ const Board = () => {
           </div>
           {/* progressDiv section */}
           <div className={Style.progressDiv}>
-            <div className={Style.inner}>
+            <div style={{marginBottom:"10px"}} className={Style.inner}>
               <p>In progress</p>{" "}
               <span
                 onClick={() => {
@@ -186,7 +186,7 @@ const Board = () => {
           </div>
           {/* done section */}
           <div className={Style.doneDiv}>
-            <div className={Style.inner}>
+            <div style={{marginBottom:"10px"}} className={Style.inner}>
               <p>Done</p>{" "}
               <span
                 onClick={() => {
