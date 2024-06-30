@@ -1,0 +1,341 @@
+.mainContainer {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(48, 61, 67, 0.55);
+    z-index: 10;
+}
+
+.innerDiv {
+    background: white;
+    border-radius: 7px;
+    padding: 25px 26px;
+    height: 30rem;
+    width: 31rem;
+    position: relative;
+   
+}
+
+.innerDivinp {
+    width: 30rem;
+    height: 1.7rem;
+    border-radius: 5px;
+    outline: none;
+    padding: 4px;
+    border-color: rgba(77, 64, 85, 0.1);
+    margin-top: 7px;
+    margin-bottom: 1.2rem;
+    color: gray;
+    border: 1px solid;
+    box-shadow: 0px 1px 2px 0px rgba(77, 64, 85, 0.1);
+    z-index: 10;
+}
+
+.chips {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.priorityChip {
+    display: flex;
+    gap: 10px;
+}
+
+.priorityChip span {
+    font-size: 9.5px;
+    color: rgba(118, 117, 117, 1);
+    background: rgba(238, 236, 236, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 5px;
+    padding: 6px 9px;
+}
+
+.circle {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.sky {
+    background: rgba(24, 176, 255, 1);
+
+}
+
+.green {
+    background-color: green;
+}
+
+.dropdownButton {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dropdownButton p {
+    font-size: 15px;
+}
+
+.tasks p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+
+}
+
+.addBtn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: center;
+    color: rgba(118, 117, 117, 1);
+    cursor: pointer;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 31rem;
+    position: absolute;
+    bottom: 12px;
+    z-index: 3;
+}
+
+.btnDiv button {
+    font-weight: 600;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 2rem;
+    width: 7rem;
+    background-color: white;
+    box-shadow: 0px 2px 12px 0px rgba(130, 105, 140, 0.2);
+}
+
+.btnDivright {
+    display: flex;
+    gap: 10px;
+}
+
+.dueDatePicker {
+    position: relative;
+    display: inline-block;
+}
+
+.dueDateInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* Hide the input field */
+    pointer-events: none;
+    /* Prevent interaction */
+}
+
+.assign {
+    display: flex;
+    box-shadow: 0px 1px 2px 0px rgba(77, 64, 85, 0.1);
+    height: 2rem;
+    width: 24rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 0px 5px 0px 9px;
+    color: gray;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgba(77, 64, 85, 0.1);
+}
+
+.dropDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dropDiv ul li {
+    list-style: none;
+}
+
+.dropDiv ul {
+    position: absolute;
+    top: -10px;
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 0px 1px 2px 0px rgba(77, 64, 85, 0.1);
+    height: max-content;
+    width: 24rem;
+    left: 20%;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 7;
+    box-sizing: border-box;
+    padding: 14px 19px;
+    height: 16rem;
+    overflow: auto;
+}
+
+.dropDiv ul::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+}
+
+.dropDiv ul::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 183, 197, 1);
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+.dropDiv ul::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 179, 205);
+}
+
+.tasks::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 183, 197, 1);
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+.tasks::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 179, 205);
+}
+
+.dropDiv li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dropDiv li span {
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background: rgba(255, 235, 235, 1);
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    padding: 5px;
+    margin-right: 1.4rem;
+}
+
+.dropDiv li button {
+    font-weight: 200;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 5rem;
+    right: 5px;
+    color: #828282;
+    border: 1px solid #d6d6d6;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 2px 12px 0px rgba(130, 105, 140, 0.2);
+}
+
+.checks h3 {
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.required {
+    color: red;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+    width: 1rem;
+    height: 1rem;
+}
+
+.taskText {
+    flex-grow: 1;
+    font-size: 14px;
+    border: none;
+    background: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+.deleteButton {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.addButton {
+    background: none;
+    border: none;
+    color: #77777c;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.tasks {
+    height: 13rem;
+    overflow: auto;
+}
+.errMessage{
+    position: absolute;
+    bottom: 4px;
+    letter-spacing: 1px;
+    left: 33%;
+    color: red;
+}
+/* Style the checkbox when it's checked */
+.task input[type="checkbox"]:checked {
+    background-color: rgba(23, 162, 184, 1);
+}
+
+/* Style the checkmark */
+.task input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 5px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 5px 0 0 8px;
+}

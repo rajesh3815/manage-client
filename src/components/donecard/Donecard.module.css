@@ -1,0 +1,172 @@
+.container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.head {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.popup {
+    position: absolute;
+    right: 9px;
+    top: 1rem;
+    background: white;
+    border-radius: 7px;
+    padding: 14px 80px 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.popup ul li {
+    list-style-type: none;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.leftSpan {
+    display: flex;
+}
+
+.prioritySpan {}
+
+.assignSpan {}
+
+.circle {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.sky {
+    background: rgba(24, 176, 255, 1);
+
+}
+
+.green {
+    background-color: rgb(66, 243, 66);
+}
+
+.prioritys {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.prioritys span {
+    font-weight: 200;
+    font-size: 7px;
+    color: gray;
+}
+
+.assignSpan {
+    height: 1rem;
+    width: 1rem;
+    font-size: 11px;
+    margin: auto;
+    padding: 2px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 235, 235, 1);
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.taskTitle {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.checkListHero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkListHero p {
+    font-size: 15px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.task input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+    padding: 9px;
+    border-radius: 6px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Style the checkbox when it's checked */
+.task input[type="checkbox"]:checked {
+    background-color: rgba(23, 162, 184, 1);
+}
+
+/* Style the checkmark */
+.task input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 5px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 5px 0 0 8px;
+}
+.bthDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.bthDiv span {
+    border-radius: 9px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    background-color: rgba(99, 192, 91, 1);
+    color: rgb(255, 255, 255);
+}
+
+.btns button {
+    cursor: pointer;
+    background-color: rgb(236, 238, 236);
+    color: rgba(118, 117, 117, 1);
+    border: none;
+    outline: none;
+    font-size: 11px;
+    padding: 5px 11px;
+    border-radius: 9px;
+}
+
+.btns {
+    display: flex;
+    gap: 5px;
+}

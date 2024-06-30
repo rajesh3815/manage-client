@@ -1,0 +1,100 @@
+.mainDiv {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.leftDiv {
+    background-color: rgba(23, 162, 184, 1);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgDiv {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+}
+
+.imgDiv img {
+    width: 25rem;
+    height: 30rem;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(17 133 151);
+    width: 15rem;
+    height: 15rem;
+    left: 5rem;
+    bottom: 9rem;
+    z-index: -1;
+}
+
+.descDiv {
+    margin-top: -4rem;
+    text-align: center;
+    color: white;
+}
+
+.rightMainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.rightContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3rem;
+    /* border: 1px solid; */
+}
+
+.inputDiv input {
+    width: 20rem;
+    height: 2.3rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-left: 7px;
+}
+
+.inputDiv {
+    display: flex;
+    border: 1px solid rgb(242, 242, 242);
+    width: 20rem;
+    padding: 3px 12px;
+    height: 2.3rem;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border-color: gray !important;
+}
+.btn{
+    width: 20rem;
+    height: 2.2rem;
+    border-radius: 18px;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 1px;
+    outline: none;
+    background: rgba(23, 162, 184, 1);
+    cursor: pointer;
+}
+.formFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}

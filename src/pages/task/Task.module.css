@@ -1,0 +1,157 @@
+.circle {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+}
+
+.sky {
+    background: rgba(24, 176, 255, 1);
+
+}
+
+.green {
+    background-color: rgb(66, 243, 66);
+}
+
+.prioritys {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: rgba(112, 112, 112, 1);
+    margin-bottom: 1rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.task input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+    padding: 9px;
+    border-radius: 6px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Style the checkbox when it's checked */
+.task input[type="checkbox"]:checked {
+    background-color: rgba(23, 162, 184, 1);
+}
+
+/* Style the checkmark */
+.task input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 5px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 5px 0 0 8px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    position: absolute;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    left: 30px;
+    font-weight: 700;
+}
+
+.contenet {
+    border: 2px solid rgba(237, 245, 254, 1);
+    border-radius: 8px;
+    padding: 26px 13px;
+    width: 40rem;
+    height: 35rem;
+}
+
+.hero {}
+
+.checkLists {
+    height: 26rem;
+    overflow-y: auto;
+}
+
+.taskNam {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.checkListsp {
+    margin-bottom: 10px;
+}
+
+
+.checkLists::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+
+.checkLists::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 183, 197, 1);
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+.checkLists::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 179, 205);
+}
+
+.dt {
+    border-radius: 9px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    background: rgb(207, 54, 54);
+    color: white;
+}
+
+.date {
+    display: flex;
+    margin-top: 19px;
+    align-items: center;
+    gap: 1rem;
+    font-size: 14px;
+}
+
+@media only screen and (max-width:767px) {
+    .contenet {
+        width: 20rem;
+        height: 28rem;
+        margin-top: 1.5rem;
+    }
+
+    .checkLists {
+        height: 22rem;
+    }
+}

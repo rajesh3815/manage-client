@@ -1,0 +1,161 @@
+.mainContainer {
+    width: -webkit-fill-available;
+    height: 100vh;
+    padding: 5px 0px 5px 22px;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+
+    /* margin-top: 1.5rem; */
+}
+
+.heroRight {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 22px 0px 0px;
+    gap: 1.5rem;
+    height: 5rem;
+    margin-top: 2rem;
+}
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    height: 5rem;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.dropdownMenu {
+    margin-top: 8px;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0px 2px 22px 0px rgba(126, 122, 122, 0.25);
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown ul li {
+    list-style-type: none;
+}
+
+.dropdown li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.addPpl {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.addPpl p {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.addPpl span {
+    color: rgba(112, 112, 112, 1);
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* border: 1px solid; */
+    height: 80vh;
+    width: 80vw;
+    margin-top: 1rem;
+    overflow: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+
+}
+
+.backlogDiv,
+.todoDiv,
+.progressDiv,
+.doneDiv {
+    height: 99.4%;
+    width: 23rem;
+    background-color: rgba(238, 242, 245, 1);
+    border-radius: 8px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 15px 5px 0px 9px;
+}
+
+.content::-webkit-scrollbar {
+    height: 12px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 183, 197, 1);
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 179, 205);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 96%;
+}
+
+.inner img {
+    width: 17px;
+    cursor: pointer;
+}
+
+.plus {
+    font-size: 32px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.cardContainer {
+    overflow: auto;
+    height: 93%;
+    padding: 0px 7px 0px 10px;
+}
+
+.cardContainer::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+    padding: 10px;
+}
+
+.cardContainer::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 183, 197, 1);
+    border-radius: 6px;
+}
+
+.cardContainer::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 179, 205);
+}
+
+.cardContainer::-webkit-scrollbar-track {
+    background-color: rgba(214, 234, 244, 1);
+
+    
+}
