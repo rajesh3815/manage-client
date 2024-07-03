@@ -53,7 +53,7 @@ const Analytics = () => {
             </div>
             <div className={Style.listDiv}>
               <li>Due Date Tasks</li>
-              <span>00</span>
+              <span>{analysis.deuDat}</span>
             </div>
           </ul>
         </div>

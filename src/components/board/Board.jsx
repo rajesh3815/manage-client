@@ -9,10 +9,11 @@ import Card from "../taskcard/Card";
 import Backcard from "../backlogcard/Backcard";
 import Progcard from "../progresscard/Progcard";
 import Donecard from "../donecard/Donecard";
+import darrow from "../../assets/downarrow.svg";
 import { taskContext } from "../../TaskContext";
 const options = ["Today", "This week", "This month"];
 const Board = () => {
-  const { taskgets, delet, todoModal, setTododModal, isedit,addtogle } =
+  const { taskgets, delet, todoModal, setTododModal, isedit, addtogle } =
     useContext(taskContext);
   const [selectedOption, setSelectedOption] = useState("This week");
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ const Board = () => {
   const [tasks, setTasks] = useState([]);
   useEffect(() => {
     getTaskAll();
-  }, [taskgets, selectedOption, delet, isedit,addtogle]);
+  }, [taskgets, selectedOption, delet, isedit, addtogle]);
   //getting all tasks through api call
   const getTaskAll = async () => {
     const data = await getFilterAlltasks(selectedOption);
@@ -81,13 +82,17 @@ const Board = () => {
           <div className={Style.heroRight}>
             <p>{formatDate()}</p>
             <div className={Style.dropdown}>
-              <div className={Style.dropdownButton}>
+              <div  className={Style.dropdownButton}>
                 {selectedOption}{" "}
                 <span
                   onClick={() => setIsOpen(!isOpen)}
                   className={Style.arrow}
                 >
-                  {isOpen ? "▲" : "▼"}
+                  {isOpen ? (
+                    <img src={darrow} alt="" />
+                  ) : (
+                    <img src={darrow} alt="" />
+                  )}
                 </span>
               </div>
               {isOpen && (
@@ -106,7 +111,7 @@ const Board = () => {
         <div className={Style.content}>
           {/* backlog section */}
           <div className={Style.backlogDiv}>
-            <div style={{marginBottom:"10px"}} className={Style.inner}>
+            <div style={{ marginBottom: "10px" }} className={Style.inner}>
               <p>Backlog</p>{" "}
               <span
                 onClick={() => {
@@ -162,7 +167,7 @@ const Board = () => {
           </div>
           {/* progressDiv section */}
           <div className={Style.progressDiv}>
-            <div style={{marginBottom:"10px"}} className={Style.inner}>
+            <div style={{ marginBottom: "10px" }} className={Style.inner}>
               <p>In progress</p>{" "}
               <span
                 onClick={() => {
@@ -186,7 +191,7 @@ const Board = () => {
           </div>
           {/* done section */}
           <div className={Style.doneDiv}>
-            <div style={{marginBottom:"10px"}} className={Style.inner}>
+            <div style={{ marginBottom: "10px" }} className={Style.inner}>
               <p>Done</p>{" "}
               <span
                 onClick={() => {

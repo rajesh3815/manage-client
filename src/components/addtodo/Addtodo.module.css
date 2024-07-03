@@ -18,7 +18,7 @@
     height: 30rem;
     width: 31rem;
     position: relative;
-   
+
 }
 
 .innerDivinp {
@@ -311,16 +311,18 @@
 }
 
 .tasks {
-    height: 13rem;
+    max-height: 13rem;
     overflow: auto;
 }
-.errMessage{
+
+.errMessage {
     position: absolute;
     bottom: 4px;
     letter-spacing: 1px;
     left: 33%;
     color: red;
 }
+
 /* Style the checkbox when it's checked */
 .task input[type="checkbox"]:checked {
     background-color: rgba(23, 162, 184, 1);

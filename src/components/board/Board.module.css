@@ -155,7 +155,9 @@
 }
 
 .cardContainer::-webkit-scrollbar-track {
-    background-color: rgba(214, 234, 244, 1);
-
-    
+    background-color: rgba(214, 234, 244, 1);  
+}
+.dropdownButton{
+    font-weight: 600;
+    color: black;
 }

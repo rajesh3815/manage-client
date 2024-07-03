@@ -57,7 +57,7 @@ const Setting = () => {
         return;
       }
       if (formData.password === formData.oldpassword) {
-        console.log(formData.password, formData.oldpassword);
+        // console.log(formData.password, formData.oldpassword);
         setErrordata((prev) => {
           return { ...prev, password: "password cant be same" };
         });
@@ -69,6 +69,9 @@ const Setting = () => {
       }
     }
     setErrordata({ name: "", password: "", email: "", oldpassword: "" });
+    if(formData.name!==""){
+      localStorage.setItem("UserName",formData.name)
+    }
     await updateUser(formData);
     toast.success("updated successfully", {
       position: "top-right",
@@ -89,9 +92,9 @@ const Setting = () => {
       nav("/");
     }
 
-    console.log(formData);
+    // console.log(formData);
   };
-  const handeler = () => {};
+ 
   return (
     <div className={Style.container}>
       <p className={Style.head}>Settings</p>

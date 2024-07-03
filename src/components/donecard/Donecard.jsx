@@ -95,7 +95,7 @@ const Donecard = ({ task, collapseAll }) => {
     setDotOpen(false);
   };
   const handleCheck = async (id, idx) => {
-    console.log(id);
+    
     await editCheck(idx, id);
     setIsedit(!isedit);
   };

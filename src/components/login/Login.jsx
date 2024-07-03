@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { loginUser } from "../../auth/auth";
+import toast, { Toaster } from "react-hot-toast";
 const Login = ({ setToggleLogin }) => {
   const nav = useNavigate();
   const [togglPassword, setTogglPassword] = useState(false);
@@ -45,11 +46,13 @@ const Login = ({ setToggleLogin }) => {
 
     const loginData = await loginUser(formData);
     if (loginData === 400) {
-      console.log("wrong password");
+      toast.error("wrong password.")
+      // console.log("wrong password");
       return;
     }
     if (loginData === 500) {
-      console.log("user not exist");
+      toast.error("user not exist.")
+      // console.log("user not exist");
       return;
     }
     nav("/dashboard");

@@ -5,8 +5,8 @@ const options = ["HIGH PRIORITY", "MODERATE PRIORITY", "LOW PRIORITY"];
 import { RiArrowDropUpLine, RiArrowDropDownLine } from "react-icons/ri";
 import { createTodo, editTodo, getAllPeople } from "../../api/task";
 import { taskContext } from "../../TaskContext";
-import toast, { Toaster } from 'react-hot-toast';
-
+import toast, { Toaster } from "react-hot-toast";
+import deletes from "../../assets/delete.svg";
 const Addtodo = () => {
   const {
     setTododModal,
@@ -34,7 +34,7 @@ const Addtodo = () => {
     if (!editData || Object.keys(editData).length === 0) {
       return;
     }
-    console.log(editData);
+    // console.log(editData);
     setAssignPeople(editData.assignto);
     setTasks(editData.tasks);
     setSelectedOption(editData.priority);
@@ -114,11 +114,11 @@ const Addtodo = () => {
       assignPeople,
       tasks
     );
-    toast.success('Successfully added!')
+    toast.success("Successfully added!");
     setTododModal(false);
     setAddtogle(!addtogle);
-    
-    console.log("success");
+
+    // console.log("success");
   };
 
   //edit handel
@@ -149,7 +149,7 @@ const Addtodo = () => {
       tasks,
       editData._id
     );
-    toast.success('Successfully edited!')
+    toast.success("Successfully edited!");
     setIsedit(!isedit);
     setTododModal(false);
     setEditdata({});
@@ -158,7 +158,7 @@ const Addtodo = () => {
     setSelectedOption("");
     setTitle("");
     setDueDate("");
-    console.log(data);
+    // console.log(data);
   };
 
   const handelCancel = () => {
@@ -171,6 +171,16 @@ const Addtodo = () => {
     setDueDate("");
   };
   const assignHandel = (people) => {
+    if (editData && Object.keys(editData).length !== 0) {
+      if(editData.userId!==localStorage.getItem("userId")){
+        toast("you cant reassign!");
+        setIsOpen(!isOpen);
+        return;
+      }
+     
+    }
+    
+    
     setAssignPeople(people);
     setIsOpen(!isOpen);
   };
@@ -239,7 +249,7 @@ const Addtodo = () => {
                     <li key={assign._id}>
                       <span>{assign.people?.slice(0, 2)}</span>
                       {assign.people}
-                      <button onClick={() => assignHandel(assign.people)}>
+                      <button  onClick={() => assignHandel(assign.people)}>
                         Assign
                       </button>
                     </li>
@@ -275,14 +285,15 @@ const Addtodo = () => {
                   className={Style.deleteButton}
                   onClick={() => handleDelete(task.id)}
                 >
-                  🗑️
+                  {tasks.length > 1 ? <img src={deletes} alt="" /> : ""}
                 </button>
               </div>
             ))}
-            <button className={Style.addButton} onClick={handleAddNew}>
+            
+          </div>
+          <button className={Style.addButton} onClick={handleAddNew}>
               + Add New
             </button>
-          </div>
         </div>
 
         <div className={Style.btnDiv}>
@@ -345,7 +356,6 @@ const Addtodo = () => {
         </div>
         <p className={Style.errMessage}>{err}</p>
       </div>
-      
     </div>
   );
 };

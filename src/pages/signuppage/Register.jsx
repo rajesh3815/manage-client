@@ -7,6 +7,7 @@ import { CiMail } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 import Login from "../../components/login/Login";
+import toast, { Toaster } from "react-hot-toast";
 import { registerUser } from "../../auth/auth";
 const Register = () => {
   const [toggleLogin, setToggleLogin] = useState(false);
@@ -36,7 +37,7 @@ const Register = () => {
       const { name } = e.target[i];
 
       if (e.target[i].value.trim() === "") {
-        console.log(e.target[i]);
+       
         flg = true;
         setErrordata((prev) => {
           return { ...prev, [name]: `${name} field is require` };
@@ -61,11 +62,12 @@ const Register = () => {
     }
     const regData = await registerUser(formData);
     if (regData === 2) {
-      console.log("user Already exist");
+      // console.log("user Already exist");
+      toast.error("user Already exist.")
       return;
     }
     setToggleLogin(true);
-    console.log(formData);
+   
   };
   return (
     <div className={Style.mainDiv}>
